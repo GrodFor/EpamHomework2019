@@ -17,5 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Toast.makeText(this, "Cherry-pick test", Toast.LENGTH_SHORT).show();
+
+
+        System.out.println("Rebase test");
     }
 }
