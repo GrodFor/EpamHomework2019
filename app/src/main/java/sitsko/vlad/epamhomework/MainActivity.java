@@ -3,6 +3,7 @@ package sitsko.vlad.epamhomework;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,5 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Log.d("feature_2", "onCreate: ");
+
+
+        Toast.makeText(this, "Cherry-pick test", Toast.LENGTH_SHORT).show();
     }
 }
