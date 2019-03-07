@@ -1,0 +1,3 @@
+[submodule "Andro-calc"]
+	path = Andro-calc
+	url = https://github.com/GrodFor/Andro-calc.git
