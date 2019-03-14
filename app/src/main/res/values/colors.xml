@@ -3,5 +3,6 @@
     <color name="colorPrimary">#1976D2</color>
     <color name="colorPrimaryDark">#004BA0</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorRoundButton">#4DE0E0E0</color>
+    <color name="colorRoundButton">#ecedf1</color>
+    <color name="light_gray">#E0E0E0</color>
 </resources>

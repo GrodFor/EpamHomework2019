@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">EpamHomework2019</string>
+    <string name="android_pie">Android Pie</string>
+    <string name="online">online</string>
+    <string name="edit">Редактировать</string>
+    <string name="hello_google">Hello Google!</string>
+    <string name="friends">друзей</string>
+    <string name="subs">подписчиков</string>
+    <string name="city">Город:</string>
+    <string name="Grodno">Гродно</string>
+    <string name="grsu">ГрГУ им. Янки Купалы</string>
+    <string name="show_more">Подробная информация</string>
+    <string name="what_new">Что у Вас нового?</string>
+    <string name="foto">Фото</string>
+    <string name="_5">5</string>
 </resources>
