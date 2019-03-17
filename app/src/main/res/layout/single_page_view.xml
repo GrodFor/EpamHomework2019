@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/separator"
+    android:orientation="vertical"
+    android:showDividers="middle|beginning">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/podcast_logo_item1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/fragmented" />
+
+        <TextView
+            android:id="@+id/podcast_title_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton1"
+            android:layout_toRightOf="@+id/podcast_logo_item1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/developer_growth_154"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/podcast_time_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/podcast_title_item1"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton1"
+            android:layout_toRightOf="@+id/podcast_logo_item1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/_2_days_ago_19_min" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/podcast_logo_item2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/podcast_one" />
+
+        <TextView
+            android:id="@+id/podcast_title_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton2"
+            android:layout_toRightOf="@+id/podcast_logo_item2"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/android_in_a_car"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/podcast_time_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/podcast_title_item2"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton2"
+            android:layout_toRightOf="@+id/podcast_logo_item2"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/_2_days_ago_67_min" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/podcast_logo_item3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/podlodka" />
+
+        <TextView
+            android:id="@+id/podcast_title_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton3"
+            android:layout_toRightOf="@+id/podcast_logo_item3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/podlodka_101"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/podcast_time_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/podcast_title_item3"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/imageButton3"
+            android:layout_toRightOf="@+id/podcast_logo_item3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/_3_days_ago_155" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/podcast_arrow_item"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/ic_arrow" />
+
+        <TextView
+            android:id="@+id/podcast_all_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toRightOf="@+id/podcast_arrow_item"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/all"
+            android:textColor="#FF2979FF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</LinearLayout>

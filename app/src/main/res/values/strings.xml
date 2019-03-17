@@ -13,4 +13,13 @@
     <string name="what_new">Что у Вас нового?</string>
     <string name="foto">Фото</string>
     <string name="_5">5</string>
+    <string name="new_text_line">New</string>
+    <string name="developer_growth_154">154. Developer Growth: Start Writing</string>
+    <string name="_2_days_ago_19_min">2 days ago * 19 min</string>
+    <string name="android_in_a_car">Выпуск 89. Android in a car (Android Auto)</string>
+    <string name="_2_days_ago_67_min">2 days ago * 67 min</string>
+    <string name="_3_days_ago_155">3 days ago * 155 мин</string>
+    <string name="podlodka_101">Podlodka #101 - Базы данных</string>
+    <string name="all">Show all</string>
+    <string name="for_you">For you</string>
 </resources>

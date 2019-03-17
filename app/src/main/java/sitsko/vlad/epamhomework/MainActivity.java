@@ -19,5 +19,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.podcasts_open_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GooglePodcastsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

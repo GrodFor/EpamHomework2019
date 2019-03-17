@@ -17,7 +17,7 @@ public class VkProfileActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         BottomNavigationView navigation = findViewById(R.id.bottom_nav_view);
         navigation.setSelectedItemId(R.id.navigation_profile);
@@ -25,7 +25,7 @@ public class VkProfileActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        getMenuInflater().inflate(R.menu.menu_vk_toolbar, menu);
 
         return true;
     }

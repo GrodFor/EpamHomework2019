@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".VkProfileActivity" />
+        <activity android:name=".GooglePodcastsActivity"
+            android:theme="@style/PodcastsTheme"/>
     </application>
 
 </manifest>
