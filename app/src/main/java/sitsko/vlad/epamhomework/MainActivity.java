@@ -1,6 +1,7 @@
 package sitsko.vlad.epamhomework;
 
 import android.content.res.ColorStateList;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,8 +20,7 @@ import java.util.Random;
 
 import sitsko.vlad.epamhomework.compoundview.ProfileDataModel;
 import sitsko.vlad.epamhomework.compoundview.ProfileView;
-import sitsko.vlad.epamhomework.fragments.FirstFragment;
-import sitsko.vlad.epamhomework.fragments.SecondFragment;
+import sitsko.vlad.epamhomework.fragments.CombinedFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,37 +42,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
 
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        Fragment fragment = null;
-                        Class fragmentClass = null;
 
-                        int id = menuItem.getItemId();
-
-                        if (id == R.id.first_fragment) {
-                            fragmentClass = FirstFragment.class;
-                        } else if (id == R.id.second_fragment) {
-                            fragmentClass = SecondFragment.class;
-                        }
-
-                        try {
-                            fragment = (Fragment) fragmentClass.newInstance();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-                        FragmentManager fragmentManager = getSupportFragmentManager();
-                        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-
-                        menuItem.setChecked(true);
-                        setTitle(menuItem.getTitle());
-
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        return true;
-                    }
-                });
+        MyNavigationView myNavigationViewListener = new MyNavigationView();
+        navigationView.setNavigationItemSelectedListener(myNavigationViewListener);
 
         View headerView = navigationView.getHeaderView(0);
         final ProfileView profileView = headerView.findViewById(R.id.profile_view);
@@ -91,9 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -111,10 +82,55 @@ public class MainActivity extends AppCompatActivity {
 
     private ProfileDataModel getProfileModel() {
         final ProfileDataModel profileModel = new ProfileDataModel();
-        profileModel.setName(getResources().getString(R.string.vlad_sitsko));
-        profileModel.setMail(getResources().getString(R.string.vlad_sitsko_gmail_com));
+        profileModel.setName(getString(R.string.vlad_sitsko));
+        profileModel.setMail(getString(R.string.vlad_sitsko_gmail_com));
         profileModel.setIcon(R.drawable.ic_person);
 
         return profileModel;
+    }
+
+    private class MyNavigationView implements NavigationView.OnNavigationItemSelectedListener {
+
+        private static final String NUMBER_BUNDLE_KEY = "NUMBER_KEY";
+        private static final String FRAGMENT_ONE_TEXT = "Fragment #1";
+        private static final String FRAGMENT_TWO_TEXT = "Fragment #2";
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment fragment = null;
+            Class fragmentClass;
+            Bundle bundle = new Bundle();
+
+            int id = menuItem.getItemId();
+
+            if (id == R.id.first_fragment) {
+                bundle.putString(NUMBER_BUNDLE_KEY, FRAGMENT_ONE_TEXT);
+            } else if (id == R.id.second_fragment) {
+                bundle.putString(NUMBER_BUNDLE_KEY, FRAGMENT_TWO_TEXT);
+            }
+
+            fragmentClass = CombinedFragment.class;
+
+            try {
+                fragment = (CombinedFragment) fragmentClass.newInstance();
+                fragment.setArguments(bundle);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+
+            if (fragment != null) {
+                fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+            } else {
+                return false;
+            }
+
+            menuItem.setChecked(true);
+            setTitle(menuItem.getTitle());
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
+        }
     }
 }
