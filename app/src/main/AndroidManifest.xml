@@ -23,13 +23,5 @@
             android:name=".HomeworkService"
             android:enabled="true" />
 
-        <receiver
-            android:name=".HomeworkBroadcast"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="sitsko.vlad.epamhomework.HOMEWORK_ACTION" />
-            </intent-filter>
-        </receiver>
-
     </application>
 </manifest>
